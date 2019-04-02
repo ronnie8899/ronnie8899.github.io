@@ -1,45 +1,81 @@
-﻿
+﻿<!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8"/>
-    <title>羅遠實業有限公司</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Bootstrap 4, from LayoutIt!</title>
-
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    
-  </head>
 
-  <body>
-
+    <link rel="stylesheet" type="text/css" href="css/multilevel.css"/>
+</head>
+<body >
 		<div align ="left">
-			<h3>
-                <img src="pic\LORAN.jpg" width="280" height="80" >
-			</h3>
+                <img src="pic\羅遠logo2.png" width="280" height="80" >
 		</div>
-       <div align ="center">
-			
-              <a href=" "><FONT size="2">關於羅遠</a> /</font>
-		     <a href="ARTEOR_面板種類_M.html"><FONT size="2">產品系列</a> /</font>
-            <a href=" "><FONT size="2">檔案下載</a> /</font>
-            <a href=" "><FONT size="2">常見問題</a> / </font>
-            <a href=" "><FONT size="2">連絡我們</a> </font>
-		</div>
-
-<div>
-   <p style="text-align: center"><BR><BR>
-    <img src="pic\Temp.gif" width=280" height="250" ></p>
+<BR>
+<div id="menu_area" class="menu-area">
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-light navbar-expand-lg mainmenu">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                    <ul class="navbar-nav mr-auto">
+                        <li ><a href="about_M.html">關於羅遠</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">產品系列</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Legrand</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="#">Arteor</a></li>
+                                <li><a href="#">Mallia</a></li>
+                                <li><a href="#">Galion</a></li>
+                                </ul>
+                            <li><a href="#">Berker</a></li>
+                            </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">檔案下載</a></li>
+                        <li><a href="#">常見問題</a></li>
+                        <li><a href="#">連絡我們</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
 </div>
+
+
+<br>
+   <div>
+   <p style="text-align: center"><BR><BR>
+    <img src="pic\首頁照片.gif" ></p>
+  </div> 
+
+<script>
+(function($){
+	$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+	  if (!$(this).next().hasClass('show')) {
+		$(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+	  }
+	  var $subMenu = $(this).next(".dropdown-menu");
+	  $subMenu.toggleClass('show');
+
+	  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+		$('.dropdown-submenu .show').removeClass("show");
+	  });
+
+	  return false;
+	});
+})(jQuery)
+</script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-
+</body>
 </html>
+
